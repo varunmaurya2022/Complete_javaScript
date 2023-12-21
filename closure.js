@@ -1,13 +1,23 @@
+// function x() {
+//    var a = 7;
+//    function y() {
+//       var b = 20;
+//       console.log(a);
+//       function z() {
+//          console.log(b);
+//       }
+//       z();
+//    }
+//    y();
+// }
+// x();
+
 function x() {
-   var a = 7;
-   function y() {
-      var b = 20;
-      console.log(a);
-      function z() {
-         console.log(b);
-      }
-      z();
+   return function y() {
+      var x = 10;
+      console.log(x);
    }
-   y();
 }
-x();
+var z = x();
+console.log(z);
+z();
